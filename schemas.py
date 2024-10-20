@@ -64,3 +64,14 @@ class Expense(ExpenseBase):
 
     class Config:
         orm_mode = True
+
+class UserExpenseResponse(BaseModel):
+    expense_id: int
+    amount: float
+    description: str
+    split_method: str
+    type: str
+    share_amount: float
+
+    class Config:
+        orm_mode = True
